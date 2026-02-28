@@ -417,6 +417,27 @@ button:focus,
   .main-navigation li {
     padding: 15px;
   }
+  
+  
+  
+  
+/*  .navigation-list li {*/
+/*      margin-right: 1.5rem; /* or adjust as needed */*/
+/*  }*/
+/**/
+/*  .main-navigation ul {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    gap: 2rem; /* Adjust this value to increase/decrease spacing */*/
+/*    justify-self: end;*/
+/*    align-items: center;*/
+/*  }*/
+  
+  
+  
+  
+  
+  
 
   .main-navigation img {
     padding-bottom: 0px;

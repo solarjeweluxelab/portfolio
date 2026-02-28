@@ -338,6 +338,8 @@ button:focus,
   align-items: center;
 }
 
+
+
 .navigation-list {
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
@@ -418,7 +420,7 @@ button:focus,
 /*** ------------------------- MOBILE NAVIGATION ----------------------------- ***/
 
 /* THIS CAN BE USED TO SHRINK THE FONT SIZE IN THE SLIDES */
-@media only screen and (max-width: 770px) {
+
   .features {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -446,62 +448,66 @@ button:focus,
   }*/
 
   /* MOBILE NAVIGATION MENU */
-
-  .main-navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    position: fixed;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-    top: 35px;
-    /* 55px, then 30 */
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    height: calc(100vh - 55px);
-    /* 100vh - 55px
-    /* moves the nav drawer off screen */
-    -webkit-transform: translate(-101%);
-    -ms-transform: translate(-101%);
-    transform: translate(-101%);
-    text-align: center;
-    overflow: hidden;
-    z-index: 3;
-    padding: 0;
-  }
-
-  .main-navigation li {
-    padding: 15px;
-  }
-
-  .main-navigation img {
-    padding-bottom: 0px;
-  }
-
-  .main-navigation li:first-child {
-    margin-top: 50px;
-  }
-
-  .main-navigation li a {
-    font-size: 1.8rem;
-  }
-
-  .menu-toggle,
-  .bar {
-    display: block;
-    cursor: pointer;
-  }
-
-  .mobile-nav {
-    -webkit-transform: translate(0%) !important;
-    -ms-transform: translate(0%) !important;
-    transform: translate(0%) !important;
-  }
+  
+  @media only screen and (max-width: 770px) {
+      
+      .main-navigation ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          position: fixed;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: start;
+          top: 35px;
+          /* 55px, then 30 */
+          background-color: rgba(255, 255, 255, 0.8);
+          width: 100%;
+          height: calc(100vh - 55px);
+          /* 100vh - 55px
+           /* moves the nav drawer off screen */
+          -webkit-transform: translate(-101%);
+          -ms-transform: translate(-101%);
+          transform: translate(-101%);
+          text-align: center;
+          overflow: hidden;
+          z-index: 3;
+          padding: 0;
+      }
+      
+      .main-navigation li {
+          padding: 15px;
+      }
+      
+      .main-navigation img {
+          padding-bottom: 0px;
+      }
+      
+      .main-navigation li:first-child {
+          margin-top: 50px;
+      }
+      
+      .main-navigation li a {
+          font-size: 1.8rem;
+      }
+      
+      .menu-toggle,
+      .bar {
+          display: block;
+          cursor: pointer;
+      }
+      
+      .mobile-nav {
+          -webkit-transform: translate(0%) !important;
+          -ms-transform: translate(0%) !important;
+          transform: translate(0%) !important;
+      }
+      
+  
 }
 
 /*** ------------------------- ABOUT SECTION ----------------------------- ***/
@@ -552,6 +558,31 @@ table {
   height: auto;
   margin-left: 4px;
   margin-right: 4px;
+}
+
+.scrolling_footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* FIX 1: Solid background to block the 'weird purple' gradient */
+  background-color: white;
+  
+  /* FIX 2: Standard positioning so it stays AT THE BOTTOM, not ON TOP of text */
+  position: relative;
+  margin-top: auto; /* Pushes footer to the very bottom of the page */
+  padding: 30px 0;
+  width: 100%;
+  z-index: 10;
+  border-top: 1px solid #eee; /* Optional: adds a nice subtle divider line */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 /*** ------------------------- CUSTOM STYLES ----------------------------- ***/
@@ -695,6 +726,11 @@ table {
 .grid__item:hover>.cell-text {
   visibility: hidden;
 }
+
+
+
+
+
 
 
 @media all and (max-width: 750px) {
