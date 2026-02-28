@@ -92,8 +92,13 @@ li {
   color: #333;
 }
 
+.navigation-list li {
+    margin-right: 1.5rem; /* or adjust as needed */
+}
+
 .navigation-list__item {
   font-family: 'Oswald', sans-serif;
+  padding: 0 1rem;
 }
 
 /* attention: when making width 100% then adding padding and boarder causes 100% + padding + boarder */
@@ -317,12 +322,20 @@ button:focus,
   padding-bottom: 16px;
 }
 
+/*.main-navigation ul {*/
+/*  list-style: none;*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(6, 1fr);*/
+/*  justify-self: end;*/
+/**/
+/*}*/
+
 .main-navigation ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  gap: 2rem; /* Adjust this value to increase/decrease spacing */
   justify-self: end;
-
+  align-items: center;
 }
 
 .navigation-list {
