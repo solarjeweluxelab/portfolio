@@ -730,7 +730,17 @@ table {
 
 
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: transparent;
+}
 
+.video-container iframe {
+    border-radius: 15px; /* Gives the video nice rounded corners like your app images */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
 
 @media all and (max-width: 750px) {

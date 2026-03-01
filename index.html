@@ -72,37 +72,49 @@
 
 
 
-    <main class="main" style="display: flex; justify-content: center; align-content: center;">
-      <div class="profile">
-        <div class="profile-grid">
-          <div class="profile-grid__item">
-            <img class="profile__portrait" src="img/home/anya-window-upright.jpg" alt="Image of me">
+    <main class="main" style="display: flex; justify-content: center; align-items: flex-start; padding: 2rem 1rem; margin-top: 0;">
+      <div class="profile" style="max-width: 1200px; width: 100%; margin-top: 0; padding-top: 0;">
+        <!-- Top Content -->
+        <div class="top-content" style="text-align: center; margin-bottom: 2rem;">
+          <h1>Hello</h1>
+          <p>My name is Anya and I dedicated to Kotlin, Swift, Mantra, Astrology and Earthy activities.</p>
+        </div>
+
+        <!-- Images Grid: Your photo and watches side by side on desktop -->
+        <div class="images-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 2rem; align-items: center; justify-items: center;">
+          <div style="text-align: center;">
+            <img class="profile__portrait" src="img/home/anya-window-upright.jpg" alt="Image of me" style="width: 100%; max-width: 400px; height: auto;">
           </div>
-          <div class="profile-grid__item">
-            <h1>Hello</h1>
-            <p>My name is Anya and I enjoy applying analytics, product leadership, design and digital technology to
-              create innovative & inclusive experiences that help people and the environment.
-            </p>
-
-            <p>Have a look at my latest personal projects and let me know if you find them interesting.
-            </p>
-
-            <img style="width: 50px; height: auto; margin-right: 15px;" src="img/home/logos/Swift_logo_color.svg"
-              alt="Swift Logo">
-            <img style="width: 50px; height: auto; margin-left: 15px; margin-right: 15px;"
-              src="img/home/logos/Kotlin Full Color Logo Mark RGB.svg" alt="Swift Logo">
-            <img style="width: 35px; margin-left: 15px; margin-right: 15px;" src="img/home/logos/Figma-Icon.svg"
-              alt="Figma Logo">
+          <div style="text-align: center;">
+            <img class="profile__portrait" id="solarjewel-detail"
+                src="img/solarjewel/solar-jewel-watchOS-wearOS-square.png" alt="SolarJewel details" style="width: 100%; max-width: 400px; height: auto;">
           </div>
         </div>
 
+        <!-- Content below images -->
+        <div class="content-container" style="text-align: center;">
+          <p>I have created SolarJewel as gift to the spiratual community.  SolarJewel is a high-precision astronomical instrument born from years of dedicated study across UX/UI, graphics, native development and spiritual studies.  You can now wear the ancient art of the heavens while staying engaged in the earth plane.</p>
+          
+          <p>The jewel was always there, and has transformed from ancient geometry, to compute evolution, to modern hardware and continues...</p>
+          
+          <!-- Tech Stack Icons -->
+          <div style="margin-top: 2rem;">
+            <img style="width: 50px; height: auto; margin: 0 15px;" src="img/home/logos/Swift_logo_color.svg"
+              alt="Swift Logo">
+            <img style="width: 50px; height: auto; margin: 0 15px;"
+              src="img/home/logos/Kotlin Full Color Logo Mark RGB.svg" alt="Kotlin Logo">
+            <img style="width: 35px; height: auto; margin: 0 15px;" src="img/home/logos/Figma-Icon.svg"
+              alt="Figma Logo">
+          </div>
+          
+          <p>SolarJewel is now avaiable for WatchOS and WearOS.</p>
+          
+          <p>Feel free to check my other work as well</p>
+          
 
-
+        </div>
 
       </div>
-
-
-
 
     </main>
 
