@@ -111,6 +111,24 @@ li {
   margin-bottom: 10%;
 }
 
+/*** app badges ***/
+
+.app-badges {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .app-badges img {
+    transition: transform 0.2s;
+  }
+  .app-badges img:hover {
+    transform: scale(1.05); /* Adds a subtle "Jewel" shine effect on hover */
+  }
+
+/*** end app badges ***/
+
 /*** ------------------------- DEFAULT IMAGE SIZES - GENERAL ----------------------------- ***/
 
 .image-100 {
