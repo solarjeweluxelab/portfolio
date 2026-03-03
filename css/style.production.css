@@ -127,6 +127,25 @@ li {
     transform: scale(1.05); /* Adds a subtle "Jewel" shine effect on hover */
   }
 
+
+.bmc-container {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;     /* Centers vertically if the container has height */
+        padding: 40px 0;         /* Adds breathing room above and below */
+        width: 100%;
+    }
+    
+    .bmc-container img {
+        height: 50px !important; /* Forces a professional, consistent size */
+        width: auto !important;
+        transition: transform 0.3s ease; /* Matches your "Jewel" UI feel */
+    }
+
+    .bmc-container img:hover {
+        transform: scale(1.05); /* Subtle "pop" when hovered */
+    }
+
 /*** end app badges ***/
 
 /*** ------------------------- DEFAULT IMAGE SIZES - GENERAL ----------------------------- ***/
