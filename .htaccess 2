@@ -1,0 +1,41 @@
+# .htaccess - AI Bot Protection and Copyright Headers
+# Place this file in your website root directory
+
+<IfModule mod_headers.c>
+    # Add AI training restriction headers to all content
+    Header set X-Robots-Tag "noai, noimageai"
+    
+    # Add copyright notice header
+    Header set X-Copyright "Copyright 2026 Anya Traille. All Rights Reserved. AI training prohibited."
+    
+    # Prevent image AI scraping
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
+        Header set X-Robots-Tag "noai, noimageai, noimageindex"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Block known AI/ML crawler user agents
+    RewriteCond %{HTTP_USER_AGENT} (GPTBot|ChatGPT-User|CCBot|anthropic-ai|Claude-Web|Google-Extended|FacebookBot|Meta-ExternalAgent|Applebot-Extended|PerplexityBot|Bytespider|Diffbot|cohere-ai|AI2Bot|omgili|omgilibot|img2dataset|ImagesiftBot) [NC]
+    RewriteRule .* - [F,L]
+    
+    # Return 403 Forbidden with custom message
+    ErrorDocument 403 "Access Denied: AI training and automated scraping prohibited. See AI-TRAINING-RESTRICTION.txt"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Additional security headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>

@@ -1,0 +1,70 @@
+COPYRIGHT NOTICE AND AI TRAINING RESTRICTION
+==============================================
+
+© 2026 Anya Traille. All Rights Reserved.
+
+This website, including all text, images, code, design elements, videos, and other content 
+(collectively "Content"), is protected by copyright law and international treaties.
+
+PROHIBITED USES:
+----------------
+
+1. AI/ML Training: Use of this Content for training artificial intelligence, machine learning 
+   models, large language models (LLMs), or any automated content generation systems is 
+   EXPRESSLY PROHIBITED without prior written consent.
+
+2. Data Scraping: Automated scraping, crawling, harvesting, or extraction of Content for 
+   AI/ML purposes or data mining is not permitted.
+
+3. Unauthorized Reproduction: Redistribution, republication, or reproduction of Content 
+   without explicit written permission is prohibited.
+
+4. Commercial Use: Use of Content for commercial purposes without authorization is not allowed.
+
+PERMITTED USES:
+---------------
+
+- Viewing the website for personal, non-commercial purposes
+- Sharing links to the website through standard web browsing
+- Fair use as defined by copyright law (criticism, commentary, news reporting, teaching, 
+  scholarship, or research)
+
+ATTRIBUTION:
+------------
+
+If you believe you have a legitimate fair use case, proper attribution must include:
+- Credit to Anya Traille
+- Link to the original source
+- Clear indication that permission was granted or use falls under fair use
+
+ENFORCEMENT:
+------------
+
+Violation of these terms may result in legal action. AI companies and data aggregators 
+found using this Content for training purposes without permission will be subject to:
+- Cease and desist demands
+- DMCA takedown notices
+- Legal action for copyright infringement
+- Claims for damages and injunctive relief
+
+CONTACT:
+--------
+
+For permissions, licensing inquiries, or questions about permitted use:
+Portfolio: https://github.com/[your-username]/[your-repo]
+LinkedIn: https://www.linkedin.com/in/anyatraille/
+
+SPECIAL NOTICE TO AI COMPANIES:
+-------------------------------
+
+This Content is NOT available for:
+- Training datasets
+- Model fine-tuning
+- Prompt engineering examples
+- Synthetic data generation
+- Any form of machine learning or artificial intelligence development
+
+By accessing this website, you acknowledge that you have read and agree to be bound by 
+these terms.
+
+Last Updated: March 12, 2026
