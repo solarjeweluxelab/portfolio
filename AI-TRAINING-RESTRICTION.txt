@@ -1,70 +1,89 @@
-COPYRIGHT NOTICE AND AI TRAINING RESTRICTION
-==============================================
+COPYRIGHT & CREATIVE USE NOTICE
+================================
 
 © 2026 Anya Traille. All Rights Reserved.
 
-This website, including all text, images, code, design elements, videos, and other content 
-(collectively "Content"), is protected by copyright law and international treaties.
+This portfolio represents years of devoted study and creative practice. All content—including 
+text, images, code, design elements, videos, and the SolarJewel project—is protected by 
+copyright law and international treaties.
 
-PROHIBITED USES:
-----------------
+WANT TO USE MY WORK?
+--------------------
 
-1. AI/ML Training: Use of this Content for training artificial intelligence, machine learning 
-   models, large language models (LLMs), or any automated content generation systems is 
-   EXPRESSLY PROHIBITED without prior written consent.
+I'm honored if my work resonates with you! If you'd like to use, share, or reference any 
+content from this portfolio, I simply ask that you:
 
-2. Data Scraping: Automated scraping, crawling, harvesting, or extraction of Content for 
-   AI/ML purposes or data mining is not permitted.
+1. **Reach out first** - Let me know what you'd like to use and how
+2. **Ask permission** - A simple message is all it takes
+3. **Give credit** - Include my name and a link back to this portfolio
 
-3. Unauthorized Reproduction: Redistribution, republication, or reproduction of Content 
-   without explicit written permission is prohibited.
+I'm generally open to collaboration and sharing, especially for:
+- Educational purposes
+- Creative projects
+- Community initiatives
+- Non-commercial use with proper attribution
 
-4. Commercial Use: Use of Content for commercial purposes without authorization is not allowed.
+Just ask! I'm much more likely to say yes when approached respectfully. 💙
 
-PERMITTED USES:
----------------
+CONTACT ME:
+-----------
 
-- Viewing the website for personal, non-commercial purposes
-- Sharing links to the website through standard web browsing
-- Fair use as defined by copyright law (criticism, commentary, news reporting, teaching, 
-  scholarship, or research)
+For permissions, collaboration, or questions about using my work:
+- LinkedIn: https://www.linkedin.com/in/anyatraille/
+- Instagram: @solar.jewel.uxe.lab
+- Portfolio: https://github.com/[your-username]/[your-repo]
 
-ATTRIBUTION:
-------------
+AI TRAINING & DATA SCRAPING:
+----------------------------
 
-If you believe you have a legitimate fair use case, proper attribution must include:
-- Credit to Anya Traille
-- Link to the original source
-- Clear indication that permission was granted or use falls under fair use
+Use of this content for training artificial intelligence, machine learning models, or 
+automated data collection is NOT permitted without explicit written permission. This includes:
+
+- Training datasets for AI/ML models
+- Large language model (LLM) training
+- Image generation model training
+- Automated web scraping for AI purposes
+- Synthetic data generation
+- Any form of machine learning development
+
+If you represent an AI company or research institution and would like to discuss potential 
+use cases, please contact me directly.
+
+WHAT YOU CAN DO (NO PERMISSION NEEDED):
+----------------------------------------
+
+- View and enjoy the website for personal inspiration
+- Share links to my work on social media
+- Reference my work in academic papers with proper citation
+- Use as inspiration for your own creative practice (not copying)
+
+PROHIBITED WITHOUT PERMISSION:
+------------------------------
+
+- Reproducing content on other websites or publications
+- Using images, text, or code in commercial projects
+- Training AI/ML models
+- Automated scraping or data harvesting
+- Creating derivative works
 
 ENFORCEMENT:
 ------------
 
-Violation of these terms may result in legal action. AI companies and data aggregators 
-found using this Content for training purposes without permission will be subject to:
-- Cease and desist demands
+While I prefer friendly collaboration, unauthorized use may result in:
+- Polite request to remove or properly attribute
 - DMCA takedown notices
-- Legal action for copyright infringement
-- Claims for damages and injunctive relief
+- Legal action for serious violations
 
-CONTACT:
---------
+I believe in the creative community and prefer to resolve issues through conversation. 
+However, I will protect my work when necessary.
 
-For permissions, licensing inquiries, or questions about permitted use:
-Portfolio: https://github.com/[your-username]/[your-repo]
-LinkedIn: https://www.linkedin.com/in/anyatraille/
+---
 
-SPECIAL NOTICE TO AI COMPANIES:
--------------------------------
+Thank you for respecting the creative process and honoring the work that goes into 
+building something meaningful. If you're unsure whether your intended use is okay, 
+just reach out—I'm happy to discuss it!
 
-This Content is NOT available for:
-- Training datasets
-- Model fine-tuning
-- Prompt engineering examples
-- Synthetic data generation
-- Any form of machine learning or artificial intelligence development
-
-By accessing this website, you acknowledge that you have read and agree to be bound by 
-these terms.
+With gratitude,
+Anya Traille
 
 Last Updated: March 12, 2026
