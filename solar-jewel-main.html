@@ -1,3 +1,494 @@
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <title>SolarJewel - Wearable App for WearOS and WatchOS</title>-->
+<!--            -->
+<!--    <meta name="robots" content="noai, noimageai">-->
+<!--    <meta name="googlebot" content="noai, noimageai">-->
+<!--    <meta name="googlebot-news" content="nosnippet">-->
+<!--                        -->
+<!--    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />-->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Patua+One&display=swap" rel="stylesheet">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+<!--    <link rel="stylesheet" type="text/css" href="css/style.production.css">-->
+<!--    -->
+<!--    <style>-->
+<!--        #profile-pic-01 {-->
+<!--            width: 100%;-->
+<!--            height: auto;-->
+<!--            border-radius: 50%;-->
+<!--        }-->
+<!--                                                                                -->
+<!--        /*** Cleaned Layout Grid Engine */-->
+<!--        .colors-grid {-->
+<!--            margin-bottom: 80px;-->
+<!--        }-->
+<!--                                                                                -->
+<!--        .colors-grid__item {-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            justify-content: flex-start;-->
+<!--            align-items: flex-start;-->
+<!--            width: 100%;-->
+<!--        }-->
+<!---->
+<!--        .colors-grid__item img,-->
+<!--        .colors-grid__item .video-container {-->
+<!--            width: 100%;-->
+<!--            height: auto;-->
+<!--        }-->
+<!--                                                                                -->
+<!--        @supports (display: grid) {-->
+<!--            .colors-grid {-->
+<!--                display: grid;-->
+<!--                grid-template-columns: 1fr 1fr;-->
+<!--                gap: 60px;-->
+<!--                align-items: start !important;-->
+<!--                grid-auto-rows: auto;-->
+<!--            }-->
+<!---->
+<!--            .colors-grid--reverse {-->
+<!--                direction: rtl;-->
+<!--            }-->
+<!---->
+<!--            .colors-grid--reverse .colors-grid__item {-->
+<!--                direction: ltr;-->
+<!--            }-->
+<!--                                                                                    -->
+<!--            .colors-grid__item {-->
+<!--                width: auto;-->
+<!--                min-height: auto;-->
+<!--                margin: 0;-->
+<!--            }-->
+<!--                                                                                    -->
+<!--            .colors-grid__item img {-->
+<!--                width: 100%;-->
+<!--                height: auto;-->
+<!--                display: block;-->
+<!--            }-->
+<!--        }-->
+<!--                                                                                -->
+<!--        @media all and (max-width: 750px) {-->
+<!--            .colors-grid {-->
+<!--                display: flex;-->
+<!--                flex-direction: column;-->
+<!--                gap: 30px;-->
+<!--                margin-bottom: 50px;-->
+<!--            }-->
+<!---->
+<!--            .colors-grid--reverse {-->
+<!--                display: flex;-->
+<!--                flex-direction: column;-->
+<!--            }-->
+<!--            -->
+<!--            .colors-grid h2 {-->
+<!--                font-size: 22px;-->
+<!--            }-->
+<!--        }-->
+<!--                                                                                -->
+<!--        /*** ------------------------- ABOUT SECTION - IMAGE ANIMATIONS ----------------------------- ***/-->
+<!--        @-webkit-keyframes circle-0-color-change {-->
+<!--            0% { fill: #6b0097; stroke: #6b0097; }-->
+<!--            100% { fill: #342870; stroke: #342870; }-->
+<!--        }-->
+<!--        @keyframes circle-0-color-change {-->
+<!--            0% { fill: #6b0097; stroke: #6b0097; }-->
+<!--            100% { fill: #342870; stroke: #342870; }-->
+<!--        }-->
+<!--        @-webkit-keyframes circle-0-ring-color-change {-->
+<!--            0% { stroke: #6b0097; }-->
+<!--            100% { stroke: #342870; }-->
+<!--        }-->
+<!--        @keyframes circle-0-ring-color-change {-->
+<!--            0% { stroke: #6b0097; }-->
+<!--            100% { stroke: #342870; }-->
+<!--        }-->
+<!--        .circle-0 {-->
+<!--            -webkit-animation-duration: 4s; animation-duration: 4s;-->
+<!--            -webkit-animation-name: circle-0-color-change; animation-name: circle-0-color-change;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: alternate; animation-direction: alternate;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--        .circle-0-ring {-->
+<!--            -webkit-animation-duration: 4s; animation-duration: 4s;-->
+<!--            -webkit-animation-name: circle-0-ring-color-change; animation-name: circle-0-ring-color-change;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: alternate; animation-direction: alternate;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--        @-webkit-keyframes circle-1-color-change {-->
+<!--            0% { fill: #be3263; stroke: #be3263; }-->
+<!--            100% { fill: #1f7f79; stroke: #1f7f79; }-->
+<!--        }-->
+<!--        @keyframes circle-1-color-change {-->
+<!--            0% { fill: #be3263; stroke: #be3263; }-->
+<!--            100% { fill: #1f7f79; stroke: #1f7f79; }-->
+<!--        }-->
+<!--        .circle-1 {-->
+<!--            -webkit-animation-duration: 4s; animation-duration: 4s;-->
+<!--            -webkit-animation-name: circle-1-color-change; animation-name: circle-1-color-change;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: alternate; animation-direction: alternate;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--        @-webkit-keyframes circle-2-color-change {-->
+<!--            0% { fill: #990182; stroke: #990182; }-->
+<!--            100% { fill: #26547b; stroke: #26547b; }-->
+<!--        }-->
+<!--        @keyframes circle-2-color-change {-->
+<!--            0% { fill: #990182; stroke: #990182; }-->
+<!--            100% { fill: #26547b; stroke: #26547b; }-->
+<!--        }-->
+<!--        .circle-2 {-->
+<!--            -webkit-animation-duration: 4s; animation-duration: 4s;-->
+<!--            -webkit-animation-name: circle-2-color-change; animation-name: circle-2-color-change;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: alternate; animation-direction: alternate;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--        @-webkit-keyframes circle-3-color-change {-->
+<!--            0% { fill: #df5848; stroke: #df5848; }-->
+<!--            100% { fill: #2fac66; stroke: #2fac66; }-->
+<!--        }-->
+<!--        @keyframes circle-3-color-change {-->
+<!--            0% { fill: #df5848; stroke: #df5848; }-->
+<!--            100% { fill: #2fac66; stroke: #2fac66; }-->
+<!--        }-->
+<!--        .circle-3 {-->
+<!--            -webkit-animation-duration: 4s; animation-duration: 4s;-->
+<!--            -webkit-animation-name: circle-3-color-change; animation-name: circle-3-color-change;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: alternate; animation-direction: alternate;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--        @-webkit-keyframes blob-float {-->
+<!--            from { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }-->
+<!--            to { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }-->
+<!--        }-->
+<!--        @keyframes blob-float {-->
+<!--            from { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }-->
+<!--            to { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }-->
+<!--        }-->
+<!--        .background-circle {-->
+<!--            -webkit-animation-duration: 30s; animation-duration: 30s;-->
+<!--            -webkit-animation-name: blob-float; animation-name: blob-float;-->
+<!--            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;-->
+<!--            -webkit-animation-direction: normal; animation-direction: normal;-->
+<!--            -webkit-animation-timing-function: linear; animation-timing-function: linear;-->
+<!--        }-->
+<!--                                                                                -->
+<!--        /*** ------------------------- PARALLAX SCROLLING EXPERIMENT ----------------------------- ***/-->
+<!--        .slide { position: relative; padding: 8% 0; }-->
+<!--        .slide__content { max-width: 1200px; margin: auto; }-->
+<!--        .slide__text, .slide__image { padding: 8%; }-->
+<!--        .slide__image svg { display: block; width: 100%; max-width: 560px; margin: auto; }-->
+<!--        .slide__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; }-->
+<!--                                                                                -->
+<!--        #slide-1 .slide__bg {-->
+<!--            background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--            background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--        }-->
+<!--        #slide-2 .slide__bg { background: white; }-->
+<!--        #slide-3 .slide__bg {-->
+<!--            background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--            background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--        }-->
+<!--        #slide-4 .slide__bg { background: white; }-->
+<!--        #slide-5 .slide__bg {-->
+<!--            background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--            background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);-->
+<!--        }-->
+<!--        #slide-6 .slide__bg { background: white; }-->
+<!--                                                                                -->
+<!--        @media screen and (min-width: 45em) {-->
+<!--            .slide__content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }-->
+<!--            .slide__image, .slide__text { padding: 3%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }-->
+<!--            .slide:nth-child(2n) .slide__text { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }-->
+<!--                                                                                    -->
+<!--            @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {-->
+<!--                body { -webkit-transform: translateZ(0); transform: translateZ(0); }-->
+<!--                .slides { position: absolute; width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; scroll-behavior: smooth; }-->
+<!--                .slide, .slide__content { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }-->
+<!--                .slide__text { -webkit-transform: translateZ(60px) scale(0.8); transform: translateZ(60px) scale(0.8); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; }-->
+<!--                .slide:nth-child(2n) .slide__image { -webkit-transform: translateZ(100px) scale(0.67); transform: translateZ(100px) scale(0.67); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; }-->
+<!--                .slide:nth-child(2n) .slide__text { -webkit-transform-origin: 0% 50%; -ms-transform-origin: 0% 50%; transform-origin: 0% 50%; }-->
+<!--                .slide:nth-child(2n) .slide__bg { -webkit-transform: translateZ(59px) scale(0.85); transform: translateZ(59px) scale(0.85); }-->
+<!--                .slide:nth-child(2n+1):not(:first-child) .slide__bg { top: -50%; }-->
+<!--                .slide:nth-child(2n+1):not(:last-child) .slide__bg { bottom: -50%; }-->
+<!--                .slide:first-child { padding-top: 14%; padding-bottom: 1%; }-->
+<!--                .slide:last-child { padding-bottom: 20%; }-->
+<!--                .slide:nth-child(2n) { z-index: 1; }-->
+<!--            }-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!---->
+<!--<body>-->
+<!--    -->
+<!--    <div class="page-wrap">-->
+<!--        <header class="page-header">-->
+<!--            <nav class="main-navigation page-header__item">-->
+<!--                <img src="img/Anya_071cropped-modified.png" style="width: 2.5rem; height: auto;" class="page-logo page-header__item" alt="logo">-->
+<!--                <div class="menu-toggle" id="mobile-menu">-->
+<!--                    <span class="bar"></span>-->
+<!--                    <span class="bar"></span>-->
+<!--                    <span class="bar"></span>-->
+<!--                </div>-->
+<!--                <ul role="menubar" class="navigation-list no-search">-->
+<!--                    <li role="presentation">-->
+<!--                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>-->
+<!--                    </li>-->
+<!--                    <li role="presentation">-->
+<!--                        <a href="solar-jewel-main.html" role="menuitem" class="navigation-list__item">SolarJewel</a>-->
+<!--                    </li>-->
+<!--                    <li role="presentation">-->
+<!--                        <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>-->
+<!--                    </li>-->
+<!--                    <li role="presentation">-->
+<!--                        <a href="about.html" role="menuitem" class="navigation-list__item">About</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </nav>-->
+<!--        </header>-->
+<!--        -->
+<!--        <main class="main">-->
+<!--            <h1>SolarJewel</h1>-->
+<!--            <p style="margin-bottom: 60px;">Elevating from implementation to distribution</p>-->
+<!--            -->
+<!--            <div class="colors-grid">-->
+<!--                <div class="colors-grid__item">-->
+<!--                    <h2 style="margin-top: 0 !important; padding-top: 0 !important;">A Seven Year Journey</h2>-->
+<!--                    <p>SolarJewel is a high-precision astronomical instrument that I created from years of devoted study in UX/UI, native development, graphics, breath, meditation and astrology.</p>-->
+<!--                    -->
+<!--                    <p><strong>I intend for it to solve a quiet, essential need: the ability to remain present in the physical earth plane while staying aligned with the planetary flow.</strong> So if one is holding space in ceremony, in their daily flow, or just finding stillness, I want SolarJewel to opens up a portal to the heavens, right on our wrist.</p>-->
+<!--                    -->
+<!--                    <p>After 7 years of playing in Swift, Kotlin, pushing pixels in Adobe and Figma then a long spiritual break it all came together very suddenly, crystal clear and sparkling right in front of me, like a jewel.</p>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid__item">-->
+<!--                    <img class="image-100" id="colors-02" src="img/solarjewel/solar-jewel-wearos-00-both.jpg" alt="SolarJewel app displayed on WearOS and Apple Watch smartwatches">-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="photography-grid__item" style="margin-bottom: 80px;">-->
+<!--                <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SolarJewel_AllDevices_Transit.jpg" alt="SolarJewel Engine Transit view across all device variants">-->
+<!--            </div>-->
+<!--            -->
+<!--            <h2 style="margin-top: 0 !important;">Engineering the User Experience</h2>-->
+<!--            <p>I have always wanted to be a UX Engineer and spent years training in it and my dream has finally come true. This is both a tech jewel for the soul, but also a professional astrology engine.</p>-->
+<!--            -->
+<!--            <div class="colors-grid colors-grid--reverse">-->
+<!--                <div class="colors-grid__item">-->
+<!--                    -->
+<!--                    <h3 style="font-family: 'Space Mono', monospace; font-size: 1rem; margin-top: 25px;">Where to download</h3>-->
+<!--                    <p><strong>SolarJewel is available for free across major storefronts:</strong></p>-->
+<!--                    -->
+<!--                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Apple WatchOS</p>-->
+<!--                    <a href="https://apps.apple.com/fr/app/solarjewel/id6756219992?l=en-GB" target="_blank" style="margin-bottom: 15px; display: inline-block;">-->
+<!--                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px; width: auto;">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Apple iOS Phone & Tablet</p>-->
+<!--                    <a href="https://apps.apple.com/fr/app/solarjewel-engine/id6760313280" target="_blank" style="margin-bottom: 15px; display: inline-block;">-->
+<!--                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px; width: auto;">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Android: WearOS, Phone & Tablet</p>-->
+<!--                    <a href="https://play.google.com/store/apps/details?id=com.anya.kronospherefree" target="_blank" style="display: inline-block;">-->
+<!--                        <img src="img/get-on-google-play.svg" alt="Get it on Google Play" style="height: 40px; width: auto;">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid__item">-->
+<!--                    <div class="video-container" style="width: 100%;">-->
+<!--                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/8NrtSiMAL5g" title="SolarJewel User Gestures and Navigation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="colors-grid">-->
+<!--                <div class="colors-grid__item">-->
+<!--                    <h2 style="margin-top: 0 !important;">Tech Jewelry for the Soul</h2>-->
+<!--                    <p>My aim was to achieve lightweight beauty but with the deep and uncompromising functionality of a professional astrology engine. And wrapped in a presentation layer that feels safe, clear, and highly focused during delicate ceremonial workspace integration tasks.</p>-->
+<!---->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid__item">-->
+<!--                    <img class="image-100" id="colors-02" src="img/solarjewel/SolarJewel_Ceremony_TwoWatch_CrystalHarp.jpg" alt="SolarJewel app displayed in a ritual setting alongside a clear crystal harp interface">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            -->
+<!--            <p>The watch interface makes it simple and easy to explore complex house system configurations, alter primary computational tracking modes, seamlessly step through historical geometric intervals, or reset cleanly to the immediate cosmic "now" with a singular responsive gesture.</p>-->
+<!--            -->
+<!--            <div class="project-main" style="padding-bottom: 10%;">-->
+<!--                -->
+<!--                <div class="colors-grid colors-grid--reverse">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">User Experience Architecture</h2>-->
+<!--                        <p>Step back or shift your cosmic coordinates instantly. Sweep dynamically from your native Natal structure into Transit alignments, Secondary Progressions, or Solar Arc projections with a clean vertical swipe modifier gesture.</p>-->
+<!--                        <p><strong>The Professional's Secret:</strong> Compare ancient and contemporary geometric spatial framing systems (including Placidus, Porphyry, and several alternate calculation frameworks) dynamically with a responsive horizontal wipe shortcut layout.</p>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <img class="image-100" id="colors-02" src="img/solarjewel/solarGem_all_modes.jpg" alt="Layout matrix displaying all computational viewing modes of the engine interface">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="colors-grid">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">Luminous Time-Travel</h2>-->
+<!--                        <p>Use smooth system swipe paths to shift seamlessly through multi-year structural periods. You can easily revisit the precise planetary physics informing major foundational life events, or project parameters forward to discover how the geometric landscape of the "now" continues to chart your unique evolutionary path.</p>-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <div class="video-container" style="width: 100%;">-->
+<!--                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/c7x9bUSGtt0" title="SolarJewel Structural Coordinate Shifts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <p><strong>Quiet Companion</strong></p>-->
+<!--                <p>It is intended to serve as a quiet companion that provides glanceable enchantment while keeping our hands free for the work of living. So a dedicated partner for those who seek to walk between worlds.</p>-->
+<!--                -->
+<!--                <div class="photography-grid__item" style="margin-bottom: 40px;">-->
+<!--                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-03.jpg" alt="Ceremonial environmental usage profile picture">-->
+<!--                </div>-->
+<!--                -->
+<!--                <p><strong>A Precision Gradient</strong></p>-->
+<!--                <p>I have always loved rainbows, so this jewel toned scientific color palette has been tuned for optical harmony to ensure that every sign glows with a balanced and sophisticated light.</p>-->
+<!--                -->
+<!--                <div class="photography-grid__item" style="margin-bottom: 60px;">-->
+<!--                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-02.jpg" alt="Chromatic UI harmony close up graphic asset representation">-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid" style="margin-top: 40px; margin-bottom: 40px;">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <div class="video-container" style="width:100%;">-->
+<!--                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/uCKru6xDEao" title="SolarJewel Settings Setup One" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <div class="video-container" style="width:100%;">-->
+<!--                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/svmtpW-LsvE" title="SolarJewel Settings Setup Two" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="colors-grid" style="margin-bottom: 60px;">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <div class="video-container" style="width:100%;">-->
+<!--                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/gH8BhNTf360" title="SolarJewel Settings Setup Three" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">Sacred Privacy, Scientific Truth and Total Sanctuary</h2>-->
+<!--                        <p>In this tool, your structural natal records and real-time transition pathways never leave your personal wrist boundary; every element of the astronomical mathematical engine runs natively and entirely offline on your local device hardware. These planetary matrices belong entirely to you.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="photography-grid__item" style="margin-bottom: 60px;">-->
+<!--                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-04.jpg" alt="A quiet visual sanctuary display of data safety parameters">-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">Configuration</h2>-->
+<!--                        <p>How to tune the jewel (more content coming...)</p>-->
+<!--                        <img class="image-100" style="margin-top: 15px;" src="img/solarjewel/solarjewel-wearos-05-mode.jpg" alt="Configuration matrix engine window variant mapping">-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <img class="image-100" src="img/solarjewel/solarjewel-wearos-06-arc.jpg" alt="Arc adjustments layout parameters interface profile element">-->
+<!--                        <img class="image-100" style="margin-top: 25px;" src="img/solarjewel/solarjewel-wearos-07-orbs.jpg" alt="Calculation parameter options display pane close up view">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid colors-grid--reverse" style="margin-top: 60px;">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">The Journey</h2>-->
+<!--                        <p>I started preparing for this in 2018. I had mastered Swift and Kotlin years ago in my <a href="about.html">formal training</a> but my personal projects were only temporary. The images below are much later, when I realized my mac was out of date and did some tests on my iPad (using playgrounds) before upgrading to a new mac.</p>-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <img class="image-100" src="img/solarjewel/solarjewel-story-01.jpg" alt="Early layout mapping notes snapshot view">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="colors-grid" style="margin-top: 30px;">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <img class="image-100" src="img/solarjewel/solarjewel-story-02.jpg" alt="Sandbox processing platform architecture draft text block layout view">-->
+<!--                    </div>-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <img class="image-100" src="img/solarjewel/solarjewel-story-03.jpg" alt="Development staging workspace panel mapping visualization layout block representation">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="photography-grid__item" style="margin-top: 35px; margin-bottom: 60px;">-->
+<!--                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-04.jpg" alt="The design framework scaling seamlessly on iPad platforms">-->
+<!--                </div>-->
+<!--                -->
+<!--                <div class="colors-grid">-->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <h2 style="margin-top: 0 !important;">A Gift to the Community</h2>-->
+<!--                        <p>To me, this jewel represents an evolution from ancient geometry to planetary math to compute evolution to new software and now modern wearable devices.</p>-->
+<!--                        <p style="margin-top: 20px;"><em>SolarJewel utilizes the Swiss Ephemeris engine (licensed) to support its extended planetary calculations for high precision accuracy.</em></p>-->
+<!--                        <p>I look forward to building more experiences for the community.</p>-->
+<!--                        -->
+<!--                        <div style="margin-top: 30px; width: 100%;">-->
+<!--                            <p>Thank you!</p>-->
+<!--                            <a href="https://buymeacoffee.com/solarjeweluxelab" target="_blank" style="display: inline-block; margin-top: 10px;">-->
+<!--                                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=solarjeweluxelab&button_color=FFDD00&font_color=000000&font_family=Cookie&outline_color=000000&coffee_color=ffffff" alt="Buy me a coffee layout link">-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="colors-grid__item">-->
+<!--                        <div class="video-container" style="width: 100%; margin-bottom: 25px;">-->
+<!--                            <iframe width="100%" height="560" src="https://youtube.com/embed/doOEG54YZ34" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--                        </div>-->
+<!--                        <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SJ-ios-watchos.jpg" alt="Cross platform system landscape representation graphic">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+<!--        </main>-->
+<!--        -->
+<!--        <footer class="scrolling_footer">-->
+<!--            <div class="social-media">-->
+<!--                <a href="https://www.instagram.com/solar.jewel.uxe.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="find-me-on" src="img/insta_icon.svg" alt="insta image"></a>-->
+<!--                <a href="#" target="_blank"><img class="find-me-on" src="img/git_icon.png" alt="git image"></a>-->
+<!--                <a href="https://www.linkedin.com/in/anyatraille/" target="_blank"><img class="find-me-on" src="img/link_icon.png" alt="lin image"></a>-->
+<!--            </div>-->
+<!--            <div class="copyright-notice" style="margin-top: 1.5em; font-size: 1em; color: #333;">-->
+<!--                <p style="margin: 0;">© 2026 Anya Traille. All Rights Reserved.-->
+<!--                <a href="AI-TRAINING-RESTRICTION.txt" style="text-decoration: underline; color: #26547b;">Want to use my work? Just ask! 💙</a></p>-->
+<!--            </div>-->
+<!--        </footer>-->
+<!--    </div>-->
+<!--    -->
+<!--    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>-->
+<!--    <script src="scripts.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,33 +523,40 @@
             border-radius: 50%;
         }
                                                                                 
-        /*** grid */
+        /*** Cleaned Layout Grid Engine */
+        .colors-grid {
+            margin-bottom: 80px;
+        }
                                                                                 
         .colors-grid__item {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            width: auto;
+            width: 100%;
+        }
+
+        .colors-grid__item img,
+        .colors-grid__item .video-container {
+            width: 100%;
+            height: auto;
         }
                                                                                 
         @supports (display: grid) {
             .colors-grid {
                 display: grid;
-                -ms-grid-columns: 1fr 50px 1fr;
                 grid-template-columns: 1fr 1fr;
-                gap: 50px;
+                gap: 60px;
                 align-items: start !important;
                 grid-auto-rows: auto;
             }
-                                                                                    
-            /* Layout for the Colors section on larger screens */
-            .colors-grid__item:nth-child(1) {
-                grid-column: 1;
+
+            .colors-grid--reverse {
+                direction: rtl;
             }
-                                                                                    
-            .colors-grid__item:nth-child(2) {
-                grid-column: 2;
+
+            .colors-grid--reverse .colors-grid__item {
+                direction: ltr;
             }
                                                                                     
             .colors-grid__item {
@@ -72,659 +570,198 @@
                 height: auto;
                 display: block;
             }
-                                                                                    
-            /* Intro Text */
-            .colors-grid__item:first-child {
-                -ms-grid-column: span 2;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(2) {
-                -ms-grid-column: span 2;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(5) {
-                -ms-grid-column: span 2;
-                grid-column: span 2;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(6) {
-                -ms-grid-column: span 2;
-                grid-column: span 2;
-            }
-
-            .colors-grid > .colors-grid__item:first-child { align-self: start !important; }
         }
                                                                                 
         @media all and (max-width: 750px) {
             .colors-grid {
-                -ms-grid-columns: 1fr;
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-bottom: 50px;
             }
-                                                                                    
-            /* Stack text above image on mobile */
-            .colors-grid__item:nth-child(2) {
-                grid-column: 1;
-                grid-row: 1;
+
+            .colors-grid--reverse {
+                display: flex;
+                flex-direction: column;
             }
-            .colors-grid__item:nth-child(1) {
-                grid-column: 1;
-                grid-row: 2;
-            }
-                                                                                    
-            .colors-grid h1 {
-                font-size: 26px;
-            }
-                                                                                    
+            
             .colors-grid h2 {
-                font-size: 20px;
-            }
-                                                                                    
-            .colors-grid__item:first-child {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 1;
-                grid-row-start: 1;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(2) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 2;
-                grid-row-start: 2;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(3) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 3;
-                grid-row-start: 3;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(4) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 4;
-                grid-row-start: 4;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(5) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 5;
-                grid-row-start: 5;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(6) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 6;
-                grid-row-start: 6;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(7) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 8;
-                grid-row-start: 8;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(8) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 7;
-                grid-row-start: 7;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(9) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 9;
-                grid-row-start: 9;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(10) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 10;
-                grid-row-start: 10;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(11) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 12;
-                grid-row-start: 12;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(12) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 11;
-                grid-row-start: 11;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(13) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 13;
-                grid-row-start: 13;
-            }
-                                                                                    
-            .colors-grid__item:nth-child(14) {
-                -ms-grid-column: span 1;
-                grid-column-start: span 1;
-                -ms-grid-row: 14;
-                grid-row-start: 14;
+                font-size: 22px;
             }
         }
 
-        @media all and (max-width: 750px) {
-            .colors-grid { align-items: start !important; grid-auto-rows: auto; }
-            .colors-grid > .colors-grid__item:first-child { align-self: start !important; }
+        /*** Custom 3-Column Display for Watch Face Configurations */
+        .config-gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            margin-bottom: 80px;
         }
-                                                                                
-        .colors-grid__item { display: flex; }
-
-        @media all and (max-width: 750px) {
-            .colors-grid { align-items: start !important; }
+        
+        .config-gallery-grid__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .config-gallery-grid__item img {
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .config-gallery-grid__item h3 {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #26547b;
+        }
+        
+        @media all and (max-width: 850px) {
+            .config-gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
         }
                                                                                 
         /*** ------------------------- ABOUT SECTION - IMAGE ANIMATIONS ----------------------------- ***/
-                                                                                
-        /* Circle 0 */
         @-webkit-keyframes circle-0-color-change {
-            0% {
-                fill: #6b0097;
-                stroke: #6b0097;
-            }
-                                                                                    
-            100% {
-                fill: #342870;
-                stroke: #342870;
-            }
+            0% { fill: #6b0097; stroke: #6b0097; }
+            100% { fill: #342870; stroke: #342870; }
         }
-                                                                                
         @keyframes circle-0-color-change {
-            0% {
-                fill: #6b0097;
-                stroke: #6b0097;
-            }
-                                                                                    
-            100% {
-                fill: #342870;
-                stroke: #342870;
-            }
+            0% { fill: #6b0097; stroke: #6b0097; }
+            100% { fill: #342870; stroke: #342870; }
         }
-                                                                                
         @-webkit-keyframes circle-0-ring-color-change {
-            0% {
-                stroke: #6b0097;
-            }
-                                                                                    
-            100% {
-                stroke: #342870;
-            }
+            0% { stroke: #6b0097; }
+            100% { stroke: #342870; }
         }
-                                                                                
         @keyframes circle-0-ring-color-change {
-            0% {
-                stroke: #6b0097;
-            }
-                                                                                    
-            100% {
-                stroke: #342870;
-            }
+            0% { stroke: #6b0097; }
+            100% { stroke: #342870; }
         }
-                                                                                
         .circle-0 {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-0-color-change;
-            animation-name: circle-0-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 4s; animation-duration: 4s;
+            -webkit-animation-name: circle-0-color-change; animation-name: circle-0-color-change;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate; animation-direction: alternate;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
-                                                                                
         .circle-0-ring {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-0-ring-color-change;
-            animation-name: circle-0-ring-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 4s; animation-duration: 4s;
+            -webkit-animation-name: circle-0-ring-color-change; animation-name: circle-0-ring-color-change;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate; animation-direction: alternate;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
-                                                                                
-        /* Circlel 1 */
         @-webkit-keyframes circle-1-color-change {
-            0% {
-                fill: #be3263;
-                stroke: #be3263;
-            }
-                                                                                    
-            100% {
-                fill: #1f7f79;
-                stroke: #1f7f79;
-            }
+            0% { fill: #be3263; stroke: #be3263; }
+            100% { fill: #1f7f79; stroke: #1f7f79; }
         }
-                                                                                
         @keyframes circle-1-color-change {
-            0% {
-                fill: #be3263;
-                stroke: #be3263;
-            }
-                                                                                    
-            100% {
-                fill: #1f7f79;
-                stroke: #1f7f79;
-            }
+            0% { fill: #be3263; stroke: #be3263; }
+            100% { fill: #1f7f79; stroke: #1f7f79; }
         }
-                                                                                
-        @-webkit-keyframes circle-1-ring-color-change {
-            0% {
-                stroke: #be3263;
-            }
-                                                                                    
-            100% {
-                stroke: #1f7f79;
-            }
-        }
-                                                                                
-        @keyframes circle-1-ring-color-change {
-            0% {
-                stroke: #be3263;
-            }
-                                                                                    
-            100% {
-                stroke: #1f7f79;
-            }
-        }
-                                                                                
         .circle-1 {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-1-color-change;
-            animation-name: circle-1-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 4s; animation-duration: 4s;
+            -webkit-animation-name: circle-1-color-change; animation-name: circle-1-color-change;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate; animation-direction: alternate;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
-                                                                                
-        .circle-1-ring {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-1-ring-color-change;
-            animation-name: circle-1-ring-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-        }
-                                                                                
-        /* Circle 2 */
         @-webkit-keyframes circle-2-color-change {
-            0% {
-                fill: #990182;
-                stroke: #990182;
-            }
-                                                                                    
-            100% {
-                fill: #26547b;
-                stroke: #26547b;
-            }
+            0% { fill: #990182; stroke: #990182; }
+            100% { fill: #26547b; stroke: #26547b; }
         }
-                                                                                
         @keyframes circle-2-color-change {
-            0% {
-                fill: #990182;
-                stroke: #990182;
-            }
-                                                                                    
-            100% {
-                fill: #26547b;
-                stroke: #26547b;
-            }
+            0% { fill: #990182; stroke: #990182; }
+            100% { fill: #26547b; stroke: #26547b; }
         }
-                                                                                
-        @-webkit-keyframes circle-2-ring-color-change {
-            0% {
-                stroke: #990182;
-            }
-                                                                                    
-            100% {
-                stroke: #26547b;
-            }
-        }
-                                                                                
-        @keyframes circle-2-ring-color-change {
-            0% {
-                stroke: #990182;
-            }
-                                                                                    
-            100% {
-                stroke: #26547b;
-            }
-        }
-                                                                                
         .circle-2 {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-2-color-change;
-            animation-name: circle-2-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 4s; animation-duration: 4s;
+            -webkit-animation-name: circle-2-color-change; animation-name: circle-2-color-change;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate; animation-direction: alternate;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
-                                                                                
-        .circle-2-ring {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-2-ring-color-change;
-            animation-name: circle-2-ring-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-        }
-                                                                                
-        /* circle 3 */
         @-webkit-keyframes circle-3-color-change {
-            0% {
-                fill: #df5848;
-                stroke: #df5848;
-            }
-                                                                                    
-            100% {
-                fill: #2fac66;
-                stroke: #2fac66;
-            }
+            0% { fill: #df5848; stroke: #df5848; }
+            100% { fill: #2fac66; stroke: #2fac66; }
         }
-                                                                                
         @keyframes circle-3-color-change {
-            0% {
-                fill: #df5848;
-                stroke: #df5848;
-            }
-                                                                                    
-            100% {
-                fill: #2fac66;
-                stroke: #2fac66;
-            }
+            0% { fill: #df5848; stroke: #df5848; }
+            100% { fill: #2fac66; stroke: #2fac66; }
         }
-                                                                                
-        @-webkit-keyframes circle-3-ring-color-change {
-            0% {
-                stroke: #df5848;
-            }
-                                                                                    
-            100% {
-                stroke: #2fac66;
-            }
-        }
-                                                                                
-        @keyframes circle-3-ring-color-change {
-            0% {
-                stroke: #df5848;
-            }
-                                                                                    
-            100% {
-                stroke: #2fac66;
-            }
-        }
-                                                                                
         .circle-3 {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-3-color-change;
-            animation-name: circle-3-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 4s; animation-duration: 4s;
+            -webkit-animation-name: circle-3-color-change; animation-name: circle-3-color-change;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate; animation-direction: alternate;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
-                                                                                
-        .circle-3-ring {
-            -webkit-animation-duration: 4s;
-            animation-duration: 4s;
-            -webkit-animation-name: circle-3-ring-color-change;
-            animation-name: circle-3-ring-color-change;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-        }
-                                                                                
-        /* Background Circle Animation */
         @-webkit-keyframes blob-float {
-            from {
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                -webkit-transform: rotateZ(0deg);
-                transform: rotateZ(0deg);
-            }
-                                                                                    
-            to {
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                -webkit-transform: rotateZ(360deg);
-                transform: rotateZ(360deg);
-            }
+            from { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+            to { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
         }
-                                                                                
         @keyframes blob-float {
-            from {
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                -webkit-transform: rotateZ(0deg);
-                transform: rotateZ(0deg);
-            }
-                                                                                    
-            to {
-                -webkit-transform-origin: 50% 50%;
-                transform-origin: 50% 50%;
-                -webkit-transform: rotateZ(360deg);
-                transform: rotateZ(360deg);
-            }
+            from { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(0deg); transform: rotateZ(0deg); }
+            to { -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
         }
-                                                                                
         .background-circle {
-            -webkit-animation-duration: 30s;
-            animation-duration: 30s;
-            -webkit-animation-name: blob-float;
-            animation-name: blob-float;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: normal;
-            animation-direction: normal;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+            -webkit-animation-duration: 30s; animation-duration: 30s;
+            -webkit-animation-name: blob-float; animation-name: blob-float;
+            -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+            -webkit-animation-direction: normal; animation-direction: normal;
+            -webkit-animation-timing-function: linear; animation-timing-function: linear;
         }
                                                                                 
         /*** ------------------------- PARALLAX SCROLLING EXPERIMENT ----------------------------- ***/
-                                                                                
-        /* slide layout
-        --------------------------------------------- */
-                                                                                
-        .slide {
-            position: relative;
-            padding: 8% 0;
-        }
-                                                                                
-        .slide__content {
-            max-width: 1200px;
-            margin: auto;
-        }
-                                                                                
-        .slide__text,
-        .slide__image {
-            padding: 8%;
-        }
-                                                                                
-        .slide__image svg {
-            display: block;
-            width: 100%;
-            max-width: 560px;
-            margin: auto;
-        }
-                                                                                
-        .slide__bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-                                                                                
-        /* slide backgrounds */
+        .slide { position: relative; padding: 8% 0; }
+        .slide__content { max-width: 1200px; margin: auto; }
+        .slide__text, .slide__image { padding: 8%; }
+        .slide__image svg { display: block; width: 100%; max-width: 560px; margin: auto; }
+        .slide__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1; }
                                                                                 
         #slide-1 .slide__bg {
             background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
             background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
         }
-                                                                                
-        #slide-2 .slide__bg {
-            background: white;
-        }
-                                                                                
+        #slide-2 .slide__bg { background: white; }
         #slide-3 .slide__bg {
             background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
             background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
         }
-                                                                                
-        #slide-4 .slide__bg {
-            background: white;
-        }
-                                                                                
+        #slide-4 .slide__bg { background: white; }
         #slide-5 .slide__bg {
             background-image: -o-linear-gradient(315deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
             background-image: linear-gradient(135deg, rgba(81, 0, 255, 0.23853291316526615) 0%, rgba(0, 127, 189, 0.22172619047619047) 14%, rgba(213, 168, 0, 0.48783263305322133) 100%);
         }
-                                                                                
-        #slide-6 .slide__bg {
-            background: white;
-        }
-                                                                                
-        /* Homepage Large screen layout
-        --------------------------------------------- */
+        #slide-6 .slide__bg { background: white; }
                                                                                 
         @media screen and (min-width: 45em) {
-            .slide__content {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-            }
+            .slide__content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+            .slide__image, .slide__text { padding: 3%; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+            .slide:nth-child(2n) .slide__text { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
                                                                                     
-            .slide__image,
-            .slide__text {
-                padding: 3%;
-                -webkit-box-flex: 1;
-                -ms-flex: 1;
-                flex: 1;
-            }
-                                                                                    
-            .slide:nth-child(2n) .slide__text {
-                -webkit-box-ordinal-group: 2;
-                -ms-flex-order: 1;
-                order: 1;
-            }
-                                                                                    
-            /* parallax */
             @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch))) {
-                                                                                            
-                body {
-                    -webkit-transform: translateZ(0);
-                    transform: translateZ(0);
-                }
-                                                                                            
-                .slides {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    overflow-x: hidden;
-                    overflow-y: auto;
-                    -webkit-perspective: 300px;
-                    perspective: 300px;
-                    scroll-behavior: smooth;
-                }
-                                                                                            
-                .slide,
-                .slide__content {
-                    -webkit-transform-style: preserve-3d;
-                    transform-style: preserve-3d;
-                }
-                                                                                            
-                .slide__text {
-                    -webkit-transform: translateZ(60px) scale(0.8);
-                    transform: translateZ(60px) scale(0.8);
-                    -webkit-transform-origin: 100% 50%;
-                    -ms-transform-origin: 100% 50%;
-                    transform-origin: 100% 50%;
-                }
-                                                                                            
-                .slide:nth-child(2n) .slide__image {
-                    -webkit-transform: translateZ(100px) scale(0.67);
-                    transform: translateZ(100px) scale(0.67);
-                    -webkit-transform-origin: 100% 50%;
-                    -ms-transform-origin: 100% 50%;
-                    transform-origin: 100% 50%;
-                }
-                                                                                            
-                .slide:nth-child(2n) .slide__text {
-                    -webkit-transform-origin: 0% 50%;
-                    -ms-transform-origin: 0% 50%;
-                    transform-origin: 0% 50%;
-                }
-                                                                                            
-                .slide:nth-child(2n) .slide__bg {
-                    -webkit-transform: translateZ(59px) scale(0.85);
-                    transform: translateZ(59px) scale(0.85);
-                }
-                                                                                            
-                .slide:nth-child(2n+1):not(:first-child) .slide__bg {
-                    top: -50%;
-                }
-                                                                                            
-                .slide:nth-child(2n+1):not(:last-child) .slide__bg {
-                    bottom: -50%;
-                }
-                                                                                            
-                .slide:first-child {
-                    padding-top: 14%;
-                    padding-bottom: 1%;
-                }
-                                                                                            
-                .slide:last-child {
-                    padding-bottom: 20%;
-                }
-                                                                                            
-                .slide:nth-child(2n) {
-                    z-index: 1;
-                }
+                body { -webkit-transform: translateZ(0); transform: translateZ(0); }
+                .slides { position: absolute; width: 100%; height: 100%; overflow-x: hidden; overflow-y: auto; -webkit-perspective: 300px; perspective: 300px; scroll-behavior: smooth; }
+                .slide, .slide__content { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+                .slide__text { -webkit-transform: translateZ(60px) scale(0.8); transform: translateZ(60px) scale(0.8); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; }
+                .slide:nth-child(2n) .slide__image { -webkit-transform: translateZ(100px) scale(0.67); transform: translateZ(100px) scale(0.67); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; }
+                .slide:nth-child(2n) .slide__text { -webkit-transform-origin: 0% 50%; -ms-transform-origin: 0% 50%; transform-origin: 0% 50%; }
+                .slide:nth-child(2n) .slide__bg { -webkit-transform: translateZ(59px) scale(0.85); transform: translateZ(59px) scale(0.85); }
+                .slide:nth-child(2n+1):not(:first-child) .slide__bg { top: -50%; }
+                .slide:nth-child(2n+1):not(:last-child) .slide__bg { bottom: -50%; }
+                .slide:first-child { padding-top: 14%; padding-bottom: 1%; }
+                .slide:last-child { padding-bottom: 20%; }
+                .slide:nth-child(2n) { z-index: 1; }
             }
         }
     </style>
@@ -760,206 +797,226 @@
         
         <main class="main">
             <h1>SolarJewel</h1>
+            <p style="margin-bottom: 60px;">Elevating from implementation to distribution</p>
             
-            <p>Elevating from implementation to distribution</p>
-            
+            <!-- Row 1: Text Left, Image Right -->
             <div class="colors-grid">
-                
                 <div class="colors-grid__item">
                     <h2 style="margin-top: 0 !important; padding-top: 0 !important;">A Seven Year Journey</h2>
                     <p>SolarJewel is a high-precision astronomical instrument that I created from years of devoted study in UX/UI, native development, graphics, breath, meditation and astrology.</p>
                     
                     <p><strong>I intend for it to solve a quiet, essential need: the ability to remain present in the physical earth plane while staying aligned with the planetary flow.</strong> So if one is holding space in ceremony, in their daily flow, or just finding stillness, I want SolarJewel to opens up a portal to the heavens, right on our wrist.</p>
                     
-                    <p>After 7 years of playing in Swift, Kotlin, pushing pixels in Adobe and Figma then a long spiratual break it all came together very suddenly, crystal clear and sparkling right in front of me, like a jewel.</p>
+                    <p>After 7 years of playing in Swift, Kotlin, pushing pixels in Adobe and Figma then a long spiritual break it all came together very suddenly, crystal clear and sparkling right in front of me, like a jewel.</p>
                 </div>
                 
                 <div class="colors-grid__item">
                     <img class="image-100" id="colors-02" src="img/solarjewel/solar-jewel-wearos-00-both.jpg" alt="SolarJewel app displayed on WearOS and Apple Watch smartwatches">
                 </div>
             </div>
-            
-            <div class="photography-grid__item">
-                <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SolarJewel_AllDevices_Transit.jpg" alt="SJ-ios-watchos.jpg">
+
+            <!-- Full Width Visual Anchor -->
+            <div class="photography-grid__item" style="margin-bottom: 80px;">
+                <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SolarJewel_AllDevices_Transit.jpg" alt="SolarJewel Engine Transit view across all device variants">
             </div>
             
+            <h2 style="margin-top: 0 !important;">Engineering the User Experience</h2>
+            <p>I have always wanted to be a UX Engineer and spent years training in it and my dream has finally come true. This is both a tech jewel for the soul, but also a professional astrology engine.</p>
             
-            
-            <p><strong>Engineering the User Experience</strong></p>
-<!--            -->
-            <p>I have always wanted to be a UX Engineer and spent years training in it and my dream has finally came true.  This is both a tech jewel for the soul, but also a professional astrology engine.</p>
-<!--            -->
-
-            
-            <div class="colors-grid">
+            <!-- Row 2 (REVERSED): Downloads Left, Gesture Video Right -->
+            <div class="colors-grid colors-grid--reverse">
+                <div class="colors-grid__item">
+    
+                    
+                    <h3 style="font-family: 'Space Mono', monospace; font-size: 1rem; margin-top: 25px;">Where to download</h3>
+                    <p><strong>SolarJewel is available for free across major storefronts:</strong></p>
+                    
+                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Apple WatchOS</p>
+                    <a href="https://apps.apple.com/fr/app/solarjewel/id6756219992?l=en-GB" target="_blank" style="margin-bottom: 15px; display: inline-block;">
+                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px; width: auto;">
+                    </a>
+                    
+                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Apple iOS Phone & Tablet</p>
+                    <a href="https://apps.apple.com/fr/app/solarjewel-engine/id6760313280" target="_blank" style="margin-bottom: 15px; display: inline-block;">
+                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px; width: auto;">
+                    </a>
+                    
+                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: #555;">Android: WearOS, Phone & Tablet</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.anya.kronospherefree" target="_blank" style="display: inline-block;">
+                        <img src="img/get-on-google-play.svg" alt="Get it on Google Play" style="height: 40px; width: auto;">
+                    </a>
+                </div>
                 
                 <div class="colors-grid__item">
-                    
-                    <h2>Where to download</h2>
-                    <p><strong>SolarJewel is available for free</strong></p>
-                    <p>Apple WatchOS</p>
-                    <p>
-                    <a href="https://apps.apple.com/fr/app/solarjewel/id6756219992?l=en-GB" target="_blank">
-                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px;">
-                    </a>
-                    
-                    <p>Apple iOS Phone & Tablet</p>
-                    <p>
-                    <a href="https://apps.apple.com/fr/app/solarjewel-engine/id6760313280" target="_blank">
-                        <img src="img/get-on-app-store.svg" alt="Download on the App Store" style="height: 40px;">
-                    </a>
-                    </p>
-                    
-                    <p>Android: WearOS and Android Phone & Tablet</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.anya.kronospherefree" target="_blank">
-                        <img src="img/get-on-google-play.svg" alt="Get it on Google Play" style="height: 40px;">
-                    </a>
+                    <div class="video-container" style="width: 100%;">
+                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/8NrtSiMAL5g" title="SolarJewel User Gestures and Navigation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Text Left, Crystal Harp Right -->
+            <div class="colors-grid">
+                <div class="colors-grid__item">
+                    <h2 style="margin-top: 0 !important;">Tech Jewelry for the Soul</h2>
+                    <p>My aim was to achieve lightweight beauty but with the deep and uncompromising functionality of a professional astrology engine. And wrapped in a presentation layer that feels safe, clear, and highly focused during delicate ceremonial workspace integration tasks.</p>
                     
                 </div>
                 
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://www.youtube.com/embed/8NrtSiMAL5g" title="SolarJewel User Gestures and Navigation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="colors-grid__item">
+                    <img class="image-100" id="colors-02" src="img/solarjewel/SolarJewel_Ceremony_TwoWatch_CrystalHarp.jpg" alt="SolarJewel app displayed in a ritual setting alongside a clear crystal harp interface">
                 </div>
             </div>
             
-
-            
-            <p><strong>Engineering the User Experience</strong></p>
-<!--            -->
-            <p>The watch interface makes it simple alnd easy to explore house systems, change modes, trvel thorugh time, reset to now with just a single gesture.</p>
-            
+            <p>The watch interface makes it simple and easy to explore complex house system configurations, alter primary computational tracking modes, seamlessly step through historical geometric intervals, or reset cleanly to the immediate cosmic "now" with a singular responsive gesture.</p>
             
             <div class="project-main" style="padding-bottom: 10%;">
                 
- 
-                
-                <div class="colors-grid">
-                    
+                <!-- Row 4 (REVERSED): Display Grid Sheet Left, Matrix Copy Right -->
+                <div class="colors-grid colors-grid--reverse">
                     <div class="colors-grid__item">
-                        <h2 style="margin-top: 0 !important; padding-top: 0 !important;">Tech Jewelry</h2>
-                        <p><strong>...</strong></p>
-                        
-                        <p>My aim was to achieve lightweight beauty but with the deep and uncompromising functionality of a professional astrology engine.  And in a casing that is safe and protective during delicate tasks.</p>
+                        <h2 style="margin-top: 0 !important;">User Experience Architecture</h2>
+                        <p>Step back or shift your cosmic coordinates instantly. Sweep dynamically from your native Natal structure into Transit alignments, Secondary Progressions, or Solar Arc projections with a clean vertical swipe modifier gesture.</p>
+                        <p><strong>The Professional's Secret:</strong> Compare ancient and contemporary geometric spatial framing systems (including Placidus, Porphyry, and several alternate calculation frameworks) dynamically with a responsive horizontal wipe shortcut layout.</p>
                     </div>
                     
                     <div class="colors-grid__item">
-                        <img class="image-100" id="colors-02" src="img/solarjewel/SolarJewel_Ceremony_TwoWatch_CrystalHarp.jpg" alt="SolarJewel app displayed on crystal harp">
+                        <img class="image-100" id="colors-02" src="img/solarjewel/solarGem_all_modes.jpg" alt="Layout matrix displaying all computational viewing modes of the engine interface">
                     </div>
                 </div>
-                
-                
-                
-                
+
+                <!-- Row 5: Time Travel Copy Left, Navigation Video Right -->
+                <div class="colors-grid">
+                    <div class="colors-grid__item">
+                        <h2 style="margin-top: 0 !important;">Luminous Time-Travel</h2>
+                        <p>Use smooth system swipe paths to shift seamlessly through multi-year structural periods. You can easily revisit the precise planetary physics informing major foundational life events, or project parameters forward to discover how the geometric landscape of the "now" continues to chart your unique evolutionary path.</p>
+                    </div>
+                    <div class="colors-grid__item">
+                        <div class="video-container" style="width: 100%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/c7x9bUSGtt0" title="SolarJewel Structural Coordinate Shifts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Row Elements (Sequential Media Gallery Layout) -->
                 <p><strong>Quiet Companion</strong></p>
                 <p>It is intended to serve as a quiet companion that provides glanceable enchantment while keeping our hands free for the work of living. So a dedicated partner for those who seek to walk between worlds.</p>
                 
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-03.jpg" alt="solarjewel-ceremony-03.jpg">
+                <div class="photography-grid__item" style="margin-bottom: 40px;">
+                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-03.jpg" alt="Ceremonial environmental usage profile picture">
                 </div>
                 
                 <p><strong>A Precision Gradient</strong></p>
                 <p>I have always loved rainbows, so this jewel toned scientific color palette has been tuned for optical harmony to ensure that every sign glows with a balanced and sophisticated light.</p>
                 
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-02.jpg" alt="solarjewel-ceremony-02.jpg">
+                <div class="photography-grid__item" style="margin-bottom: 60px;">
+                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-02.jpg" alt="Chromatic UI harmony close up graphic asset representation">
                 </div>
                 
-                <div class="photography-grid__item">
-                    <h2 class="small-h2" style="padding-top: 5%;">User Experience</h2>
-                    <p>Step back or shift your perspective instantly. Sweep from Natal, Transit to Secondary Progression and Solar Arc with a vertical swipe.</p>
+                <!-- Double Video Settings Panel Grid Layout -->
+                <div class="colors-grid" style="margin-top: 40px; margin-bottom: 40px;">
+                    <div class="colors-grid__item">
+                        <div class="video-container" style="width:100%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/uCKru6xDEao" title="SolarJewel Settings Setup One" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="colors-grid__item">
+                        <div class="video-container" style="width:100%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/svmtpW-LsvE" title="SolarJewel Settings Setup Two" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6 (REVERSED): Privacy Text Right, Settings Clip Left -->
+                <div class="colors-grid colors-grid--reverse" style="margin-bottom: 60px;">
+                    <div class="colors-grid__item">
+                        <h2 style="margin-top: 0 !important;">Sacred Privacy, Scientific Truth and Sanctuary</h2>
+                        <p>In this tool, your structural natal records and real-time transition pathways never leave your personal wrist boundary; every element of the astronomical mathematical engine runs natively and entirely offline on your local device hardware. These planetary matrices belong entirely to you.</p>
+                    </div>
+                    <div class="colors-grid__item">
+                        <div class="video-container" style="width:100%;">
+                            <iframe width="100%" height="560" src="https://www.youtube.com/embed/gH8BhNTf360" title="SolarJewel Settings Setup Three" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photography-grid__item" style="margin-bottom: 60px;">
+                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-04.jpg" alt="A quiet visual sanctuary display of data safety parameters">
                 </div>
                 
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarGem_all_modes.jpg" alt="solarjewel-wearos-01-natal.jpg">
+                <!-- Polished Configuration Section Entry Point -->
+                <div class="photography-grid__item" style="margin-top: 40px; margin-bottom: 20px;">
+                    <h2 class="small-h2" style="font-size: 2rem; margin-bottom: 10px;">Configuration</h2>
+                    <p><em>Fine-tuning the underlying engine parameters to map your custom astronomical workspace.</em></p>
+                </div>
+
+                <!-- Premium 3-Column Configuration Gallery -->
+                <div class="config-gallery-grid">
+                    <div class="config-gallery-grid__item">
+                        <img src="img/solarjewel/solarjewel-wearos-05-mode.jpg" alt="SolarJewel Tracking Mode Interface">
+                        <h3>01 // Birth / Transit Info</h3>
+                        <p style="font-size: 0.95rem; max-width: 300px; margin: auto;">Enter birth date, time and location and transit date, time and location.</p>
+                    </div>
+                    <div class="config-gallery-grid__item">
+                        <img src="img/solarjewel/solarjewel-wearos-06-arc.jpg" alt="Solar Arc Configuration Panel">
+                        <h3>02 // Chart Display</h3>
+                        <p style="font-size: 0.95rem; max-width: 300px; margin: auto;">Decide which information to display in the chart center.</p>
+                    </div>
+                    <div class="config-gallery-grid__item">
+                        <img src="img/solarjewel/solarjewel-wearos-07-orbs.jpg" alt="Orb Sensitivity Adjustments Display">
+                        <h3>03 // Orb Control</h3>
+                        <p style="font-size: 0.95rem; max-width: 300px; margin: auto;">Set the major and minor orb degrees.</p>
+                    </div>
                 </div>
                 
-                <p><strong>The Professional's Secret</strong></p>
-                <p>Compare ancient and modern house systems (Placidus, Porphyry, and several others) with a horizontal swipe.</p>
-                
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://www.youtube.com/embed/c7x9bUSGtt0" title="SolarJewel User Gestures and Navigation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- The Historical Journey Blocks Layout -->
+                <div class="colors-grid colors-grid--reverse" style="margin-top: 60px;">
+                    <div class="colors-grid__item">
+                        <h2 style="margin-top: 0 !important;">The Journey</h2>
+                        <p>I started preparing for this in 2018. I had mastered Swift and Kotlin years ago in my <a href="about.html">formal training</a> but my personal projects were only temporary. The images below are much later, when I realized my mac was out of date and did some tests on my iPad (using playgrounds) before upgrading to a new mac.</p>
+                    </div>
+                    <div class="colors-grid__item">
+                        <img class="image-100" src="img/solarjewel/solarjewel-story-01.jpg" alt="Early layout mapping notes snapshot view">
+                    </div>
+                </div>
+
+                <div class="colors-grid" style="margin-top: 30px;">
+                    <div class="colors-grid__item">
+                        <img class="image-100" src="img/solarjewel/solarjewel-story-02.jpg" alt="Sandbox processing platform architecture draft text block layout view">
+                    </div>
+                    <div class="colors-grid__item">
+                        <img class="image-100" src="img/solarjewel/solarjewel-story-03.jpg" alt="Development staging workspace panel mapping visualization layout block representation">
+                    </div>
+                </div>
+
+                <div class="photography-grid__item" style="margin-top: 35px; margin-bottom: 60px;">
+                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-04.jpg" alt="The design framework scaling seamlessly on iPad platforms">
                 </div>
                 
-                <p><strong>Luminous Time-Travel</strong></p>
-                <p>Use swipe gestures to also move through time. You can revisit the planetary geometry of major life events or look forward to see how the "now" informs your path.</p>
-                
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://www.youtube.com/embed/uCKru6xDEao" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <!-- Final Outro Presentation block Elements -->
+                <div class="colors-grid">
+                    <div class="colors-grid__item">
+                        <h2 style="margin-top: 0 !important;">A Gift to the Community</h2>
+                        <p>To me, this jewel represents an evolution from ancient geometry to planetary math to compute evolution to new software and now modern wearable devices.</p>
+                        <p style="margin-top: 20px;"><em>SolarJewel utilizes the Swiss Ephemeris engine (licensed) to support its extended planetary calculations for high precision accuracy.</em></p>
+                        <p>I look forward to building more experiences for the community.</p>
+                        
+                        <div style="margin-top: 30px; width: 100%;">
+                            <p>Thank you!</p>
+                            <a href="https://buymeacoffee.com/solarjeweluxelab" target="_blank" style="display: inline-block; margin-top: 10px;">
+                                <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=solarjeweluxelab&button_color=FFDD00&font_color=000000&font_family=Cookie&outline_color=000000&coffee_color=ffffff" alt="Buy me a coffee layout link">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="colors-grid__item">
+                        <div class="video-container" style="width: 100%; margin-bottom: 25px;">
+                            <iframe width="100%" height="560" src="https://youtube.com/embed/doOEG54YZ34" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        
+                    </div>
                 </div>
                 
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://www.youtube.com/embed/svmtpW-LsvE" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://www.youtube.com/embed/gH8BhNTf360" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <p><strong>Sacred Privacy, Scientific Truth and Total Sanctuary</strong></p>
-                <p>Sacred Privacy, Scientific Truth and Total Sanctuary: In this tool, our birth and transit data never leave your wrist; every complex chart calculation is performed locally on your device. These planets and aspects are yours alone.</p>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-ceremony-04.jpg" alt="solarjewel-ceremony-04.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <h2 class="small-h2" style="padding-top: 5%;">Configuration</h2>
-                    <p>How to tune the jewel (more content coming...)</p>
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-wearos-05-mode.jpg" alt="solarjewel-wearos-05-mode.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-wearos-06-arc.jpg" alt="solarjewel-wearos-06-arc.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-wearos-07-orbs.jpg" alt="solarjewel-wearos-07-orbs.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <h2 class="small-h2" style="padding-top: 5%;">The Journey (updating...) </h2>
-                    <p>I started preparing for this in 2018. I had mastered Swift and Kotlin years ago in my <a href="about.html">formal training</a> but my personal projects were only temporary.  The images below are much later, when I realized my mac was out of date and did some tests on my iPad (using playgrounds) before upgrading to a new mac. </p>
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-01.jpg" alt="solarjewel-story-01.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-02.jpg" alt="solarjewel-story-02.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-03.jpg" alt="solarjewel-story-03.jpg">
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/solarjewel-story-04.jpg" alt="solarjewel-story-04.jpg">
-                </div>
-                
-                <p><strong>A Gift to the Community</strong></p>
-                <p>To me, this jewel represents an evolution from ancient geometry to planetary math to compute evolution to new software and now modern wearable devices.    </p>
-                
-                <div class="video-container">
-                    <iframe width="315" height="560" src="https://youtube.com/embed/doOEG54YZ34" title="SolarJewel Settings Customization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <div class="photography-grid__item">
-                    <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SJ-ios-watchos.jpg" alt="SJ-ios-watchos.jpg">
-                </div>
-                
-                <p style="margin-top: 40px;"><em>SolarJewel utilizes the Swiss Ephemeris engine (licensed) to support its extended planetary calculations for high precision accuracy.</em></p>
-                
-                <p>I look forward to building more experiences for the community.</p>
-                
-                <a href="https://buymeacoffee.com/solarjeweluxelab" target="_blank">
-                    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=solarjeweluxelab&button_color=FFDD00&font_color=000000&font_family=Cookie&outline_color=000000&coffee_color=ffffff" alt="Buy me a coffee">
-                </a>
-                
-                <p>Thank you! </p>
+                <img class="image-100" id="solarjewel-detail" src="img/solarjewel/SJ-ios-watchos.jpg" alt="Cross platform system landscape representation graphic">
                 
             </div>
         </main>
@@ -981,5 +1038,3 @@
     <script src="scripts.js"></script>
 </body>
 </html>
-
-```
